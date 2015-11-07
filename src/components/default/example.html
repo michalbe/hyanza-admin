@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>default example</title>
+      <link href="../../../dist/main.css" rel="stylesheet">
+      <script>
+      var require = {
+        baseUrl: ".",
+        paths: {
+            "knockout": "../../bower_modules/knockout/dist/knockout",
+            "text":     "../../bower_modules/requirejs-text/text"
+        }
+      };
+      </script>
+      <script src="../../bower_modules/requirejs/require.js"></script>
+  </head>
+  <body style="background-color: #ccc; text-align:center; padding-top: 100px;">
+    <script>
+      require(['knockout'], function(ko) {
+        ko.components.register('default', { require: 'default' });
+
+        ko.applyBindings({});
+      });
+    </script>
+    <default></default>
+  </body>
+</html>
