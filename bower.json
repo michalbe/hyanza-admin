@@ -1,0 +1,17 @@
+{
+  "name": "hyanza-admin",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://github.com/michalbe/hyanza-admin",
+  "authors": [
+    "Michał Budzyński <michal@virtualdesign.pl>"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.11",
+    "requirejs-text": "~2.0.10",
+    "knockout": "~3.3.0-alpha"
+  },
+  "resolutions": {
+    "knockout": "~3.3.0-alpha"
+  }
+}
