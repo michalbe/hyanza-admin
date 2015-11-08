@@ -6,3 +6,4 @@ karma.conf.js
 test/**/*
 src/bower_modules/
 coverage
+dist/
