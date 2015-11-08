@@ -9,7 +9,8 @@
   "dependencies": {
     "requirejs": "~2.1.11",
     "requirejs-text": "~2.0.10",
-    "knockout": "~3.3.0-alpha"
+    "knockout": "~3.3.0-alpha",
+    "material-design-lite": "~1.0.6"
   },
   "resolutions": {
     "knockout": "~3.3.0-alpha"
