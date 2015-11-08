@@ -4,3 +4,5 @@ karma.conf.js
 **/require.config.js
 **/SpecRunner*.js
 test/**/*
+src/bower_modules/
+coverage
