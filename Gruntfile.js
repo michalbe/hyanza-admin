@@ -60,7 +60,8 @@ module.exports = function(grunt) {
           'out':  'dist/js/app.js',
           preserveLicenseComments: false,
           include: [
-            'bower_modules/requirejs/require.js'
+            'bower_modules/requirejs/require.js',
+            'bower_modules/material-design-lite/material.min.js'
           ]
         }
       }
