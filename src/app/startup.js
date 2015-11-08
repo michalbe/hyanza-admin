@@ -9,7 +9,7 @@ define(['knockout',
   DefaultComponent
 ) {
 
-  ko.components.register('cart-icon', DefaultComponent);
+  ko.components.register('default', DefaultComponent);
 
   ko.applyBindings({});
 });
