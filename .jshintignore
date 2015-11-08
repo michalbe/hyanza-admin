@@ -3,3 +3,4 @@ build.js
 karma.conf.js
 **/require.config.js
 **/SpecRunner*.js
+test/**/*
