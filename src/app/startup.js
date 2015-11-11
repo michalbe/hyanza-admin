@@ -4,7 +4,7 @@ define(['knockout',
 
   // components
   'components/navigation-bar/navigation-bar'
-  
+
 ], function(
   ko,
   NavigationBar
