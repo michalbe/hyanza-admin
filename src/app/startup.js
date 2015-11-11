@@ -3,13 +3,16 @@
 define(['knockout',
 
   // components
-  'components/default/default',
+  'components/navigation-bar/navigation-bar'
+  
 ], function(
   ko,
-  DefaultComponent
+  NavigationBar
 ) {
 
-  ko.components.register('default', DefaultComponent);
+  ko.components.register('navigation-bar', NavigationBar);
 
-  ko.applyBindings({});
+  ko.applyBindings({
+    pageTitle: ko.observable('Hyanza Admin')
+  });
 });
