@@ -1,4 +1,13 @@
-<div class='quantity-control minus no-select'
-     data-bind='click: decrement, css: {disabled: qty() <= 0}'>–</div>
+<button
+  class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"
+  data-bind='click: decrement, attr: {disabled: qty() <= 0}' >
+  <i class="material-icons">remove</i>
+</button>
+
 <div class='amount' data-bind='text: qty'></div>
-<div class='quantity-control add no-select' data-bind='click: increment'>+</div>
+
+<button
+  class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"
+  data-bind='click: increment' >
+  <i class="material-icons">add</i>
+</button>
