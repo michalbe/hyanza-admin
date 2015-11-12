@@ -10,7 +10,8 @@
     "requirejs": "~2.1.11",
     "requirejs-text": "~2.0.10",
     "knockout": "~3.3.0-alpha",
-    "material-design-lite": "~1.0.6"
+    "materialize": "~0.97.2",
+    "jquery": "~2.1.4"
   },
   "resolutions": {
     "knockout": "~3.3.0-alpha"
