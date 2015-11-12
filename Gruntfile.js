@@ -5,6 +5,7 @@
 module.exports = function(grunt) {
   require('jit-grunt')(grunt);
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     less: {
       development: {
         options: {
@@ -76,6 +77,17 @@ module.exports = function(grunt) {
         }
       }
     },
+    concat: {
+      options: {
+        stripBanners: true,
+        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+          '<%= grunt.template.today("yyyy-mm-dd") %> */',
+      },
+      dist: {
+        src: ['src/bower_modules/jquery/dist/jquery.min.js', 'src/bower_modules/materialize/dist/js/materialize.min.js', 'dist/js/app.js'],
+        dest: 'dist/js/app.js',
+      },
+    },
     copy: {
       main: {
         files: [
@@ -91,22 +103,23 @@ module.exports = function(grunt) {
             cwd: 'src/bower_modules/materialize/dist/font/',
             src: '**',
             dest: 'dist/font/'
-          },
-          {
-            expand: true,
-            flatten: true,
-            src: 'src/bower_modules/jquery/dist/jquery.min.js',
-            dest: 'dist/js/'
-          },
-          {
-            expand: true,
-            flatten: true,
-            src: 'src/bower_modules/materialize/dist/js/materialize.min.js',
-            dest: 'dist/js/'
+          // },
+          // {
+          //   expand: true,
+          //   flatten: true,
+          //   src: 'src/bower_modules/jquery/dist/jquery.min.js',
+          //   dest: 'dist/js/'
+          // },
+          // {
+          //   expand: true,
+          //   flatten: true,
+          //   src: 'src/bower_modules/materialize/dist/js/materialize.min.js',
+          //   dest: 'dist/js/'
           }
         ]
       }
     }
+
   });
 
   grunt.registerTask('default', ['less', 'copy', /*'build',*/ 'watch']);
@@ -114,5 +127,5 @@ module.exports = function(grunt) {
   grunt.registerTask('css', ['less']);
   grunt.registerTask('html', ['processhtml']);
   grunt.registerTask('coverage', ['coverage']);
-  grunt.registerTask('build', ['copy', 'html', 'js', 'css']);
+  grunt.registerTask('build', ['copy', 'html', 'js', 'css', 'concat']);
 };
