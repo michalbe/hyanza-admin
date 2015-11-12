@@ -69,10 +69,6 @@ module.exports = function(grunt) {
           preserveLicenseComments: false,
           include: [
             'bower_modules/requirejs/require.js'
-            // Those files are not part of the build so far because require
-            // doesn't work well with materializeCSS
-            // 'bower_modules/jquery/dist/jquery.min.js',
-            // 'bower_modules/materialize/dist/js/materialize.min.js'
           ]
         }
       }
