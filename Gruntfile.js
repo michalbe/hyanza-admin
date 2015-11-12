@@ -84,7 +84,11 @@ module.exports = function(grunt) {
           '<%= grunt.template.today("yyyy-mm-dd") %> */',
       },
       dist: {
-        src: ['src/bower_modules/jquery/dist/jquery.min.js', 'src/bower_modules/materialize/dist/js/materialize.min.js', 'dist/js/app.js'],
+        src: [
+          'src/bower_modules/jquery/dist/jquery.min.js',
+          'src/bower_modules/materialize/dist/js/materialize.min.js',
+          'dist/js/app.js'
+        ],
         dest: 'dist/js/app.js',
       },
     },
