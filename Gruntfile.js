@@ -24,6 +24,13 @@ module.exports = function(grunt) {
         options: {
           nospawn: true
         }
+      },
+      scripts: {
+        files: ['src/**/**/*.js', 'src/**/**/*.html'], // which files to watch
+        tasks: ['build'],
+        options: {
+          nospawn: true
+        }
       }
     },
     coverage: {
