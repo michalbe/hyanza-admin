@@ -7,3 +7,4 @@ test/**/*
 src/bower_modules/
 coverage
 dist/
+skeletons/
