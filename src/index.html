@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Hyanza Admin</title>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <!-- build:css style/main.css -->
     <link href="../dist/style/main.css" rel="stylesheet">
     <!-- /build -->
@@ -16,15 +18,23 @@
     </script>
     /build -->
 
+    <!-- Those files are here because of the requireJS problem with materialize
+    on build time.-->
+    <!-- build:js js/jquery.min.js -->
+    <script src="bower_modules/jquery/dist/jquery.min.js"></script>
+    <!-- /build -->
+    <!-- build:js js/materialize.min.js -->
+    <script src="bower_modules/materialize/dist/js/materialize.min.js"></script>
+    <!-- /build -->
+
     <!-- build:js js/app.js -->
     <!-- other scripts goes here... -->
-    <script src="bower_modules/material-design-lite/material.min.js"></script>
     <script src="app/require.config.js"></script>
     <script data-main="app/startup" src="bower_modules/requirejs/require.js"></script>
     <!-- /build -->
   </head>
   <body>
-    <default></default>
+    <navigation-bar></navigation-bar>
     <!-- build:template
     <script>
         require(['app/startup']);
