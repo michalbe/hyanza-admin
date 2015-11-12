@@ -4,6 +4,7 @@
   "author": "Michał Budzyński <michal@virtualdesign.pl>",
   "repository": "git@github.com:michalbe/hyanza-admin.git",
   "scripts": {
+    "test": "karma start karma.conf.js",
     "lint": "node node_modules/jshint/bin/jshint ."
   },
   "license": "UNLICENSED",
@@ -12,15 +13,15 @@
     "lint"
   ],
   "devDependencies": {
-    "jshint": "^2.8.0",
-    "precommit-hook": "^3.0.0",
     "grunt": "~0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-less": "~0.11.0",
     "grunt-contrib-requirejs": "^0.4.4",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-processhtml": "^0.3.8",
     "jit-grunt": "~0.7.0",
+    "jshint": "^2.8.0",
     "karma": "^0.12.15",
     "karma-chrome-launcher": "^0.2.0",
     "karma-coverage": "^0.4.2",
@@ -30,10 +31,7 @@
     "karma-requireglobal-preprocessor": "0.0.0",
     "karma-requirejs": "^0.2.1",
     "phantomjs": "^1.9.17",
+    "precommit-hook": "^3.0.0",
     "requirejs": "^2.1.11"
-  },
-  "scripts": {
-   "test": "karma start karma.conf.js",
-   "lint": "node node_modules/jshint/bin/jshint ."
   }
 }
