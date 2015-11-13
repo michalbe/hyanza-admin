@@ -20,6 +20,7 @@
     "grunt-contrib-requirejs": "^0.4.4",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-processhtml": "^0.3.8",
+    "grunt-scaffold": "^0.1.4",
     "jit-grunt": "~0.7.0",
     "jshint": "^2.8.0",
     "karma": "^0.12.15",
