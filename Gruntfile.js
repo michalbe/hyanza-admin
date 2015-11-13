@@ -103,20 +103,22 @@ module.exports = function(grunt) {
             cwd: 'src/bower_modules/materialize/dist/font/',
             src: '**',
             dest: 'dist/font/'
-          // },
-          // {
-          //   expand: true,
-          //   flatten: true,
-          //   src: 'src/bower_modules/jquery/dist/jquery.min.js',
-          //   dest: 'dist/js/'
-          // },
-          // {
-          //   expand: true,
-          //   flatten: true,
-          //   src: 'src/bower_modules/materialize/dist/js/materialize.min.js',
-          //   dest: 'dist/js/'
           }
         ]
+      }
+    },
+    scaffold: {
+      test: {
+        options: {
+          questions: [{
+            name: 'name',
+            type: 'input',
+            message: 'Test name:'
+          }],
+          template: {
+            'skeletons/elo.js': 'test/{{name}}.js'
+          }
+        }
       }
     }
 
@@ -128,4 +130,5 @@ module.exports = function(grunt) {
   grunt.registerTask('html', ['processhtml']);
   grunt.registerTask('coverage', ['coverage']);
   grunt.registerTask('build', ['copy', 'html', 'js', 'css', 'concat']);
+  grunt.registerTask('create', ['scaffold']);
 };
