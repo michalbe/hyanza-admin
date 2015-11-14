@@ -1,0 +1,18 @@
+<nav  class="teal lighten-2">
+   <div class="nav-wrapper">
+     <a href="#!" class="brand-logo" data-bind="text: $root.pageTitle"></a>
+     <a href="#" data-activates="navigation-mobile-menu" class="button-collapse">
+       <i class="material-icons">menu</i>
+     </a>
+     <ul class="right hide-on-med-and-down" data-bind="foreach: menuItems">
+       <li>
+         <a>
+           <i class="material-icons" data-bind="text: icon"></i>
+         </a>
+       </li>
+     </ul>
+     <ul class="side-nav" id="navigation-mobile-menu" data-bind="foreach: menuItems">
+       <li><a data-bind="text: name "></a></li>
+     </ul>
+   </div>
+ </nav>
