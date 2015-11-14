@@ -24,13 +24,13 @@ module.exports = function(grunt) {
         options: {
           nospawn: true
         }
-      },
-      scripts: {
-        files: ['src/**/**/*.js', 'src/**/**/*.html'], // which files to watch
-        tasks: ['build'],
-        options: {
-          nospawn: true
-        }
+      // },
+      // scripts: {
+      //   files: ['src/**/**/*.js', 'src/**/**/*.html'],
+      //   tasks: ['build'],
+      //   options: {
+      //     nospawn: true
+      //   }
       }
     },
     coverage: {
@@ -68,7 +68,8 @@ module.exports = function(grunt) {
           preserveLicenseComments: false,
           include: [
             'bower_modules/requirejs/require.js',
-            'bower_modules/material-design-lite/material.min.js'
+            'bower_modules/jquery/dist/jquery.min.js',
+            'bower_modules/materialize/dist/js/materialize.min.js'
           ]
         }
       }
@@ -82,13 +83,19 @@ module.exports = function(grunt) {
             flatten: true,
             dest: 'dist/images/',
             filter: 'isFile'
+          },
+          {
+            expand: true,
+            cwd: 'src/bower_modules/materialize/dist/font/',
+            src: '**',
+            dest: 'dist/font/'
           }
         ]
       }
     }
   });
 
-  grunt.registerTask('default', ['less', 'watch']);
+  grunt.registerTask('default', ['less', 'copy', /*'build',*/ 'watch']);
   grunt.registerTask('js', ['requirejs']);
   grunt.registerTask('css', ['less']);
   grunt.registerTask('html', ['processhtml']);
